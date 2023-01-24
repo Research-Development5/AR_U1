@@ -33,7 +33,7 @@ local_css('style.css')
 st.image(image='HeaderBanner.jpg')
 credentials = ServiceAccountCredentials.from_json_keyfile_name("voices-367409-3c9e0403a16a.json", scope)
 client = gspread.authorize(credentials)
-sheet = client.open("recorded voices").get_worksheet(3)
+sheet = client.open("recorded voices").get_worksheet(0)
 #sheet = client.open("recorded voices").sheet1
 existing=gd.get_as_dataframe(sheet)
 x=len(existing)
